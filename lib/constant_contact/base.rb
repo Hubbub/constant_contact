@@ -147,5 +147,10 @@ module ConstantContact
       mapping = { '&' => '&amp;', '>' => '&gt;', '<' => '&lt;', '"' => '&quot;' }
       txt.to_s.gsub(/[&"><]/) { |special| mapping[special] }
     end
+
+    def load_attributes_from_response(response)
+      puts "load_attributes_from_response"
+      super(response)
+    end
   end
 end
