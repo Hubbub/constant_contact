@@ -149,7 +149,7 @@ module ConstantContact
     end
 
     def load_attributes_from_response(response)
-      puts "load_attributes_from_response"
+      return if response['Content-Length'].blank? || response['Content-Length'] == "0" || response.body.nil?
       super(response)
     end
   end
